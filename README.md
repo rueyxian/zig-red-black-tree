@@ -1,2 +1,5 @@
 # zig-red-black-tree
-A Red-black tree data structure library for Zig.
+A [red-black tree](https://en.wikipedia.org/wiki/Red-black_tree) data structure library for Zig.
+
+
+
