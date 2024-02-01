@@ -1,8 +1,8 @@
 # zig-red-black-tree
-A red-black tree data structure library for Zig.
+A Red-black tree data structure library for Zig.
 
 ## Features
-- A [red-black tree](https://en.wikipedia.org/wiki/Red-black_tree) data structure with minimal abstractions.
+- A [Red-black tree](https://en.wikipedia.org/wiki/Red-black_tree) data structure with minimal abstractions.
 - An alternative [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree) to [`std.Treap`](https://ziglang.org/documentation/master/std/#A;std:Treap).
 - To maintain consistency, the API calls mirror those of `std.Treap`.
 
@@ -17,8 +17,8 @@ To add `red_black_tree` to your `build.zig.zon`:
     .name = "<YOUR PROGRAM>",
     .version = "0.0.0",
     .dependencies = .{
-        .network = .{
-            .url = "https://github.com/rueyxian/zig-red-black-tree/archive/refs/tags/v0.0.0.tar.gz",
+        .red_black_tree = .{
+            .url = "https://github.com/rueyxian/zig-red-black-tree/archive/refs/tags/v0.0.1.tar.gz",
             .hash = "<CORRECT HASH WILL BE SUGGESTED>",
         },
     },
