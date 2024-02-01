@@ -1,57 +1,3 @@
-# zig-red-black-tree
-A red-black tree data structure library for Zig.
-
-## Features
-- A [red-black tree](https://en.wikipedia.org/wiki/Red-black_tree) data structure with minimal abstractions.
-- An alternative [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree) to [`std.Treap`](https://ziglang.org/documentation/master/std/#A;std:Treap).
-- To maintain consistency, the API calls mirror those of `std.Treap`.
-
-
-## Installation
-
-
-To add `red_black_tree` to your `build.zig.zon`:
-
-```
-.{
-    .name = "<YOUR PROGRAM>",
-    .version = "0.0.0",
-    .dependencies = .{
-        .network = .{
-            .url = "https://github.com/rueyxian/zig-red-black-tree/archive/refs/tags/v0.0.0.tar.gz",
-            .hash = "<CORRECT HASH WILL BE SUGGESTED>",
-        },
-    },
-}
-```
-
-To add `red_black_tree` to your `build.zig`:
-
-```zig
-const dep_red_black_tree = b.dependency("red_black_tree", .{
-    .target = target,
-    .optimize = optimize,
-});
-exe.addModule("red_black_tree", dep_red_black_tree("red_black_tree"));
-```
-
-## Examples
-
-
-To run an example:
-
-```
-$ zig build <EXAMPLE>
-```
-where `<EXAMPLE>` is one of:
-
-- `run_basic`
-- `run_memory_pool`
-
-
-### Basic
-
-```zig
 const std = @import("std");
 const debug = std.debug;
 const RedBlackTree = @import("red_black_tree").RedBlackTree;
@@ -89,14 +35,3 @@ pub fn main() !void {
     }
     debug.print("\n", .{});
 }
-
-```
-
-Output:
-
-```
-21 24 25 29 30 31 34 39 42 46 47 49 50 54 55 60 76 82 83 94
-```
-
-
-
