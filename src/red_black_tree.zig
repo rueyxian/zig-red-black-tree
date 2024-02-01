@@ -5,13 +5,13 @@ const print = debug.print;
 const testing = std.testing;
 const mem = std.mem;
 
-pub fn RedBlackTree(comptime Key: type, comptime compare_fn: anytype) type {
+pub fn RedBlackTree(comptime Key: type, comptime compareFn: anytype) type {
     return struct {
         root: ?*Node = null,
         const Self = @This();
 
         fn compare(a: Key, b: Key) math.Order {
-            return compare_fn(a, b);
+            return compareFn(a, b);
         }
 
         const Color = enum { red, black };
