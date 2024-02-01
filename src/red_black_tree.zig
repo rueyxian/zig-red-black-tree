@@ -313,12 +313,13 @@ pub fn RedBlackTree(comptime Key: type, comptime compare_fn: anytype) type {
             }
         };
 
-        pub fn inorder_iterator(self: *Self) InorderIterator {
+        pub fn inorderIterator(self: *Self) InorderIterator {
             return .{ .curr = self.root };
         }
     };
 }
 
+// NOTE: copy-pasta from `std.Treap`
 fn SliceIterRandomOrder(comptime T: type) type {
     return struct {
         rng: std.rand.Random,
@@ -470,7 +471,7 @@ test "insert, find, replace, remove" {
 
     // in-order iterator check
     {
-        var it = tree.inorder_iterator();
+        var it = tree.inorderIterator();
         var last_key: u64 = 0;
         while (it.next()) |node| {
             try std.testing.expect(node.key >= last_key);
